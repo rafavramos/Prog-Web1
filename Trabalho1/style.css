@@ -7,17 +7,24 @@
 
 a {
   text-decoration: none;
+  color: var(--title-color);
 }
+
+li {
+  list-style-type: none;
+}
+
 img {
   width: 100%;
   height: auto;
 }
+
 /* # = pega ID 
 . = pega class */
 
 /* VARIABLES CSS */
 :root {
-  --hue: 159;
+  --hue: 359;
   /*colors in HSL*/
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
@@ -53,6 +60,7 @@ h1 {
   font: 500 1rem 'DM Sans', sans-serif;
   display: inline-flex;
 }
+
 .button:hover {
   background: var(--base-color-alt);
   transition: background 0.3s;
@@ -60,12 +68,11 @@ h1 {
 
 .divider1 {
   height: 1px;
-  background: linear-gradient(
-    270deg,
-    hsla(var(--hue), 36%, 57%, 1) 0%,
-    hsla(var(--hue), 65%, 88%, 0.34) 100%
-  );
+  background: linear-gradient(270deg,
+      hsla(var(--hue), 36%, 57%, 1) 0%,
+      hsla(var(--hue), 65%, 88%, 0.34) 100%);
 }
+
 /* LAYOUT */
 /* rem = unidade relativa 1 rem == 16px */
 
@@ -83,6 +90,20 @@ h1 {
 .section {
   padding: 5rem 0;
 }
+
+.menu {
+  margin-right: 2rem;
+
+}
+
+.menu li {
+  display: inline;
+  padding-left: 1.5rem;
+  font: 700 1rem 'Poppins', sans-serif;
+  color: var(--title-color);
+
+}
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -104,9 +125,10 @@ nav {
 }
 
 .logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
+  font: 700 1.4rem 'Poppins', sans-serif;
   color: var(--title-color);
 }
+
 .logo span {
   color: var(--base-color);
 }
@@ -119,12 +141,15 @@ main {
 #home {
   overflow: hidden;
 }
+
 #home .container {
   margin: 0;
 }
+
 #home .image {
   position: relative;
 }
+
 #home .image::before {
   content: '';
   height: 100%;
@@ -135,10 +160,12 @@ main {
   left: 16%;
   z-index: 0;
 }
+
 #home .image img {
   position: relative;
   right: 2.93rem;
 }
+
 #home .image img,
 #home .image::before {
   border-radius: 0.25rem;
@@ -149,9 +176,84 @@ main {
   margin-right: 1.5rem;
   text-align: center;
 }
+
 #home .text h1 {
   margin-bottom: 1rem;
 }
+
 #home .text p {
   margin-bottom: 2rem;
+}
+
+/* SOBRE */
+
+#sobre .text p {
+  margin-bottom: 2rem;
+}
+
+#sobre .text h1 {
+  margin-bottom: 1rem;
+}
+
+#sobre .text {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: center;
+}
+
+#sobre .image img {
+  width: 30rem;
+  height: 20rem;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+}
+
+#sobre .map {
+  width: 30rem;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+/* AGENDAR */
+
+#agendar .text {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: center;
+  align-items: center;
+  border: var(--base-color-second) solid 0.1rem;
+  padding: 1rem;
+}
+
+#agendar .field {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--title-color);
+
+}
+
+#agendar input {
+  width: 20rem;
+  height: 2rem;
+}
+
+#agendar p {
+  font: 700 1.2rem 'DM Sans', sans-serif;
+  color: var(--title-color);
+  margin-bottom: 2rem;
+}
+
+#agendar textarea {
+  width: 20rem;
+  height: 10rem;
+}
+
+#agendar label {
+  padding-bottom: 2rem;
 }
